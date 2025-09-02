@@ -7,125 +7,133 @@ const Index = () => {
   const advantages = [
     {
       icon: "Leaf",
-      title: "Экологически чистый",
-      description: "Изготовлен из натуральных материалов без вредных примесей"
+      title: "100% экологично",
+      description: "Изготовлен из переработанной целлюлозы без вредных химических добавок"
     },
     {
       icon: "Shield",
       title: "Огнестойкость",
-      description: "Обработан антипиренами для защиты от возгорания"
+      description: "Обработан антипиренами для защиты от возгорания, не поддерживает горение"
     },
     {
-      icon: "Snowflake",
-      title: "Теплоизоляция",
-      description: "Отличные теплоизоляционные свойства круглый год"
+      icon: "Thermometer",
+      title: "Энергоэффективность", 
+      description: "Снижает потери тепла зимой и защищает от жары летом до 40%"
     },
     {
       icon: "Volume2",
       title: "Звукоизоляция",
-      description: "Эффективно поглощает звуки и создает тишину"
+      description: "Поглощает шумы до 65 дБ, создает комфортную акустическую среду"
     },
     {
-      icon: "Zap",
-      title: "Энергоэффективность",
-      description: "Снижает затраты на отопление до 40%"
+      icon: "Droplets",
+      title: "Дышащий материал",
+      description: "Регулирует влажность, предотвращает образование конденсата"
     },
     {
-      icon: "CheckCircle",
+      icon: "Timer",
       title: "Долговечность",
-      description: "Служит более 50 лет без потери свойств"
+      description: "Срок службы более 50 лет без потери теплоизоляционных свойств"
     }
   ];
 
-  const products = [
+  const services = [
     {
-      title: "Эковата навалом",
-      description: "Для самостоятельного монтажа",
-      price: "от 850 ₽/м³",
-      features: ["Плотность 35-42 кг/м³", "Влажность до 15%", "Антисептическая обработка"]
-    },
-    {
-      title: "Монтаж эковаты",
-      description: "Профессиональная установка",
+      title: "Утепление стен",
+      description: "Бесшовное напыление эковаты в каркасные и кирпичные стены",
       price: "от 350 ₽/м²",
-      features: ["Механизированная укладка", "Гарантия на работы", "Контроль плотности"]
+      features: ["Механизированная укладка", "Равномерное распределение", "Без мостиков холода"]
     },
     {
-      title: "Комплексное утепление",
-      description: "Материал + работа под ключ",
-      price: "от 1200 ₽/м²",
-      features: ["Полный цикл работ", "Материалы в стоимости", "Гарантия 5 лет"]
+      title: "Утепление кровли",
+      description: "Теплоизоляция скатных крыш и мансардных помещений",
+      price: "от 400 ₽/м²", 
+      features: ["Влажное напыление", "Плотность 45-65 кг/м³", "Защита от промерзания"]
+    },
+    {
+      title: "Утепление полов",
+      description: "Засыпка и напыление в межлаговое пространство", 
+      price: "от 300 ₽/м²",
+      features: ["Сухая засыпка", "Звукоизоляция ударных шумов", "Быстрый монтаж"]
     }
   ];
 
   const applications = [
-    "Утепление крыш и чердаков",
-    "Изоляция стен каркасных домов",
-    "Звукоизоляция перегородок",
-    "Утепление полов по лагам",
-    "Теплоизоляция мансард",
-    "Звукоизоляция студий"
+    "Каркасные дома и коттеджи",
+    "Деревянные и брусовые дома", 
+    "Мансардные этажи и чердаки",
+    "Межэтажные перекрытия",
+    "Звукоизоляция студий",
+    "Реконструкция старых домов"
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Icon name="Leaf" size={32} className="text-primary" />
-              <span className="text-xl font-heading font-bold text-primary">ЭкоВата Крым</span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                <Icon name="Leaf" size={24} className="text-white" />
+              </div>
+              <div>
+                <div className="font-heading font-bold text-lg">Эковата Крым</div>
+                <div className="text-xs text-muted-foreground">Экологичное утепление</div>
+              </div>
             </div>
-            <div className="hidden md:flex items-center gap-6">
-              <a href="#products" className="text-foreground hover:text-primary transition-colors">Продукция</a>
-              <a href="#advantages" className="text-foreground hover:text-primary transition-colors">Преимущества</a>
-              <a href="#applications" className="text-foreground hover:text-primary transition-colors">Применение</a>
-              <a href="#prices" className="text-foreground hover:text-primary transition-colors">Цены</a>
-              <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
+              <a href="#advantages" className="text-sm font-medium hover:text-primary transition-colors">Преимущества</a>
+              <a href="#prices" className="text-sm font-medium hover:text-primary transition-colors">Цены</a>
+              <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button className="bg-primary hover:bg-primary/90">
+            <Button size="sm">
               <Icon name="Phone" size={16} className="mr-2" />
-              Заказать звонок
+              +7 (978) 031-13-44
             </Button>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-20 bg-gradient-to-b from-accent/30 to-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <Badge variant="secondary" className="text-sm font-medium">
-                <Icon name="Award" size={16} className="mr-2" />
-                Сертифицированный материал
-              </Badge>
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold leading-tight">
-                Экологичное утепление дома с <span className="text-primary">эковатой</span>
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Натуральный утеплитель из целлюлозного волокна. Безопасно для здоровья, 
-                эффективно для экономии. Профессиональный монтаж в Крыму и Севастополе.
-              </p>
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Badge variant="secondary" className="w-fit">
+                  <Icon name="Award" size={16} className="mr-2" />
+                  Сертифицированный материал
+                </Badge>
+                <h1 className="text-4xl lg:text-5xl font-heading font-bold leading-tight">
+                  Утепление домов <span className="text-primary">эковатой</span> в Крыму
+                </h1>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+                  Профессиональное утепление и звукоизоляция экологически чистым материалом. 
+                  Опыт работы более 15 лет, гарантия качества.
+                </p>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base font-medium">
+                <Button size="lg" className="font-medium">
                   <Icon name="Calculator" size={20} className="mr-2" />
                   Рассчитать стоимость
                 </Button>
-                <Button variant="outline" size="lg" className="text-base font-medium">
-                  <Icon name="Play" size={20} className="mr-2" />
-                  Посмотреть процесс
+                <Button variant="outline" size="lg" className="font-medium">
+                  <Icon name="MessageCircle" size={20} className="mr-2" />
+                  Консультация
                 </Button>
               </div>
-              <div className="flex items-center gap-8 pt-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">15+</div>
-                  <div className="text-sm text-muted-foreground">лет опыта</div>
-                </div>
+
+              <div className="grid grid-cols-3 gap-8 pt-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">2000+</div>
                   <div className="text-sm text-muted-foreground">домов утеплено</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">15+</div>
+                  <div className="text-sm text-muted-foreground">лет опыта</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">100%</div>
@@ -133,20 +141,30 @@ const Index = () => {
                 </div>
               </div>
             </div>
+
             <div className="relative">
-              <div className="aspect-square bg-primary/5 rounded-3xl overflow-hidden">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
                 <img 
-                  src="/img/ad3c6b0f-9c42-4e83-91f6-fbd7e6acf2f5.jpg" 
-                  alt="Эковата - натуральный утеплитель"
+                  src="/img/cee375fa-6f2a-49cc-aed1-cdbb1881a69a.jpg" 
+                  alt="Экологичное утепление дома эковатой"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-lg p-6 border">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border">
                 <div className="flex items-center gap-3">
-                  <Icon name="Thermometer" size={24} className="text-primary" />
+                  <Icon name="Zap" size={24} className="text-primary" />
                   <div>
-                    <div className="font-semibold">До -40°C экономии</div>
+                    <div className="font-semibold">До 40% экономии</div>
                     <div className="text-sm text-muted-foreground">на отоплении</div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-lg p-4 border">
+                <div className="flex items-center gap-3">
+                  <Icon name="Leaf" size={24} className="text-primary" />
+                  <div>
+                    <div className="font-semibold">Экологично</div>
+                    <div className="text-sm text-muted-foreground">без химии</div>
                   </div>
                 </div>
               </div>
